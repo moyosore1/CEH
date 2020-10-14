@@ -1,1 +1,1 @@
-web:gunicorn CEH.wsgi --log-file -
+web: gunicorn CEH.wsgi --log-file -
