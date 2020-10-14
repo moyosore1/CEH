@@ -1,0 +1,32 @@
+{% extends 'posts/base_template.html' %}
+{% load static %}
+{% block css %}
+    
+    <style type="text/css">
+      input[type=password]{
+        display: block;
+        width:100%;
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid grey;
+      }  
+      body{
+        background-color: white;
+      }
+    </style>
+{% endblock css %}
+{% block title %} Register{% endblock title %}
+
+{% block content %}
+        <h3 style="margin-top: 150px; text-align: center" >Register</h3>
+        <form method="POST" style="margin-top: 20px">
+            {% csrf_token %}
+            {{ form.as_p}}
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+
+
+{% endblock content %}
+
+

@@ -1,0 +1,123 @@
+{% extends 'posts/base_template.html' %}
+{% load static %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{% static 'css/diagnostics.css' %}">{% endblock css %}
+
+
+{% block title %}Diagnosis{% endblock title %}
+
+{% block content %}
+<!--main body-->
+<div class="container-full main-body section mx-auto">
+     <h2>DIAGNOSTICS</h2>
+
+  <!-- Nav pills -->
+    <ul class="nav nav-pills justify-content-center" role="tablist">
+      <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#menu">Fill a form</a></li>
+      <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#menu1">Chat with a Doctor</a></li>
+      
+   </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    
+      <div id="menu"class="container tab-pane active"><br>
+     <!--Fill a form-->
+          <h4>Fill a Form</h4>
+          <p>We offer diagnostic and treatment options for common and complex medical conditions</p>
+    
+      <form action="#">
+            <div class="form-group">
+                  <label for="email">Name:</label>
+                  <input type="email" class="form-control" placeholder="Enter Name" id="email">
+            </div>
+
+            <div class="form-group">
+                  <label for="email">Email address:</label>
+                 <input type="email" class="form-control" placeholder="Enter email" id="email">
+            </div>
+
+      <div class="form-group">
+            <label for="pwd">Home Address:</label>
+            <input type="password" class="form-control" placeholder="Enter Address" id="pwd">
+      </div>
+            <p>Services:</p>
+
+
+      <div class="form-check">
+            <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">Measurement of Visual Acuity </label>
+      </div>
+      
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Contrast Sensitivity</label>
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="">Colour Vision tests</label>
+</div>
+
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Anterior Segment photography</label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Ocular Surface</label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Examination of posterior segment</label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Tonometry – Non-contact digital tonometry</label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Pachymetry</label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Refraction </label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Dispensing of glasses
+</label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+  <input type="checkbox" class="form-check-input" value="">Dispensing of medications</label>
+</div>
+
+      <div class="form-group comment mt-2">
+           <label for="comment">Additional Comments:</label>
+           <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-info">Submit</button>
+
+    </form>
+</div>
+
+    
+<!--Chat with a doctor-->
+  <div id="menu1" class="container tab-pane"><br>
+      <h4>Chat with a Doctor</h4>
+      <p>We’re here to assist you before, during and after your visit to CEH. Find everything you need to make your visit as pleasant and comfortable as possible.</p>
+
+      <div class="alert alert-info alert-dismissible">
+          <strong>Info!</strong> There might be delay to your request as we're trying to get a Doctor to chat with you.
+
+          <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+      </div>
+  </div>
+  
+  
+ 
+  </div>
+</div>
+
+{% endblock %}
